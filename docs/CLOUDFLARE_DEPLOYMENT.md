@@ -1,9 +1,29 @@
 # Cloudflare Pages セットアップ・デプロイ・アクセス手順
 
 対象：惑星公転シミュレーター（ORBIT）  
-確認日：2026年11月18日
+確認日：2026年11月19日
 
 このアプリはReact・Viteで生成した静的ファイルをCloudflare Pagesへ配信します。基本の運用は、GitHubへのpushをきっかけに自動でビルド・公開する方式です。Cloudflareの画面名は変更される場合があります。
+
+## 0. URLに`anmemory.workers.dev`が入った場合
+
+`https://orbit-simulator.anmemory.workers.dev/`はWorkersのURL形式です。
+
+| URLの部分 | 意味 |
+| --- | --- |
+| `orbit-simulator` | 個別のWorker名 |
+| `anmemory` | Cloudflareアカウント共通の`workers.dev`サブドメイン |
+| `workers.dev` | Workersの標準配信ドメイン |
+
+`anmemory`は以前のアプリの中へ配置されたことを示すものではなく、同じアカウントのWorkerで共有するURLの名前です。Worker名だけを変更しても、この部分は変わりません。[WorkersのURL仕様](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/)
+
+**このアプリだけを`anmemory`を含まないURLにする場合は、本資料の4章の手順でPagesプロジェクトを新規作成する方法を推奨します。** 同じGitHubリポジトリを接続し、`npm run build`・出力先`dist`・Node.js 24を設定します。公開先は`https://利用可能なプロジェクト名.pages.dev`になります。Workersの既存プロジェクト名を変更するだけではPagesへ移行しません。[Pagesの作成手順](https://developers.cloudflare.com/pages/get-started/git-integration/)
+
+Pagesの新しいURLで表示・操作を確認してから、共有先を切り替えます。移行確認中は既存Workerを残しておけます。
+
+Workersを継続する場合は、所有するドメインを**対象Worker → Settings → Domains & Routes → Add → Custom Domain**で追加する方法もあります。アクティブなCloudflareゾーンが必要です。[Workersの独自ドメイン](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)
+
+アカウント共通の名前自体を変える場合は、**Workers & Pages → Your subdomain → Change**で変更できます。この設定は同じアカウントの他のWorkerの標準URLにも関係するため、今回のアプリだけを分ける目的では選びません。[サブドメイン設定](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/#configure-workersdev)
 
 ## 1. 全体の流れ
 
