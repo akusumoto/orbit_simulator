@@ -10,7 +10,7 @@
 - 計算テスト23件成功。全天体の軌道線と位置の一致、初期方向、周期、投影形状・範囲、近日点の位置、冥王星と海王星の2交点を検証。
 - ブラウザーテスト11件成功、PCのタッチ専用テスト1件は対象外。PC・スマホ相当の画面でCanvasへ渡された9天体の投影楕円が計算値と一致することを確認。
 - 型チェック・本番ビルド成功。最新の本番プレビューにJS例外・外部リクエストはなし。
-- [PCの実軌道表示](docs/screenshots/desktop-real-orbits.png) / [スマホ相当の実軌道表示](docs/screenshots/mobile-real-orbits.png)。
+- [PCの実軌道表示](screenshots/desktop-real-orbits.png) / [スマホ相当の実軌道表示](screenshots/mobile-real-orbits.png)。
 
 ## 冥王星の等間隔表示の修正
 
@@ -42,7 +42,7 @@
 | 本番プレビューのJSエラー | 0件 |
 | 初期表示・基本操作での外部リクエスト | 0件 |
 
-gzip合計はローカル計算値です。実際の配信圧縮方式・転送量はホスティング側の設定によります。fpsはローカルのヘッドレスPC環境での値であり、実機スマートフォンの性能を示すものではありません。生データは[docs/preview-report.json](docs/preview-report.json)を参照してください。
+gzip合計はローカル計算値です。実際の配信圧縮方式・転送量はホスティング側の設定によります。fpsはローカルのヘッドレスPC環境での値であり、実機スマートフォンの性能を示すものではありません。生データは[preview-report.json](preview-report.json)を参照してください。
 
 ## 自動テストで確認した動作
 
@@ -63,12 +63,12 @@ gzip合計はローカル計算値です。実際の配信圧縮方式・転送�
 
 ## 画面
 
-- [PCの初期画面](docs/screenshots/desktop.png)
-- [PCの惑星選択画面](docs/screenshots/desktop-earth.png)
-- [スマートフォンの全体画面](docs/screenshots/mobile.png)
-- [スマートフォンのシミュレーション部分](docs/screenshots/mobile-canvas.png)
+- [PCの初期画面](screenshots/desktop.png)
+- [PCの惑星選択画面](screenshots/desktop-earth.png)
+- [スマートフォンの全体画面](screenshots/mobile.png)
+- [スマートフォンのシミュレーション部分](screenshots/mobile-canvas.png)
 
-再取得する場合は本番ビルド後に次を実行してください。インストール済みのMicrosoft Edgeを使用し、一時プレビューサーバーとブラウザーは終了時に閉じます。
+再取得する場合は本番ビルド後にプロジェクトルートで次を実行してください。インストール済みのMicrosoft Edgeを使用し、一時プレビューサーバーとブラウザーは終了時に閉じます。
 
 ```powershell
 rtk proxy node scripts/verify-preview.mjs

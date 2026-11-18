@@ -1,6 +1,6 @@
 # ORBIT — 惑星公転シミュレーター
 
-承認済みの[SPEC.md](SPEC.md)に沿った、React・TypeScript・Canvas 2DのWebアプリです。
+承認済みの[SPEC.md](docs/SPEC.md)に沿った、React・TypeScript・Canvas 2DのWebアプリです。
 
 ## 起動
 
@@ -50,17 +50,13 @@ rtk npm run preview
 - ブラウザーテスト：WindowsにインストールされたMicrosoft Edgeを使用。PC画面とiPhone 13相当の画面・タッチ環境で検証。
 - `tests/`のテストはローカルサーバーを自動起動・終了します。画像や公開先への外部通信は行いません。
 - ブラウザーテストのトレース・画像は`test-results/`に出力します。
-- 検証結果・限界は[VALIDATION.md](VALIDATION.md)を参照してください。
+- 検証結果・限界は[VALIDATION.md](docs/VALIDATION.md)を参照してください。
 
 ## Cloudflare Pagesで公開
 
-1. ソースをGitHubのリポジトリへ登録する。
-2. Cloudflare Pagesでそのリポジトリを接続する。
-3. ビルドコマンドを`npm run build`、出力ディレクトリを`dist`に設定する。
-4. ビルド環境のNode.jsは24系（`NODE_VERSION=24`）にする。
-5. プレビューで表示・操作を確認してから、本番ブランチで公開する。
+セットアップ・初回デプロイ・更新・公開URLへのアクセスは、別資料の[Cloudflare Pages セットアップ・デプロイ・アクセス手順](docs/CLOUDFLARE_DEPLOYMENT.md)を参照してください。GitHub連携、プレビュー、独自ドメイン、手動アップロード、トラブル時の確認方法をまとめています。
 
-ログイン・APIキー・バックエンドは不要です。`public/_headers`の設定はPagesでの静的配信に適用されます。公開用アカウント・リポジトリの指定や公開操作は、本実装には含めていません。
+ビルドコマンドは`npm run build`、出力先は`dist`、Node.jsは24系です。アプリの利用にはログイン・APIキー・バックエンドは不要です。`public/_headers`の設定はPagesでの静的配信に適用されます。
 
 ## 構成
 
@@ -77,4 +73,4 @@ rtk npm run preview
 
 ## 出典
 
-データの定義・採用値・素材の利用条件は[CREDITS.md](CREDITS.md)に記載しています。アプリ内の「出典・クレジット」からも確認できます。
+データの定義・採用値・素材の利用条件は[CREDITS.md](docs/CREDITS.md)に記載しています。アプリ内の「出典・クレジット」からも確認できます。

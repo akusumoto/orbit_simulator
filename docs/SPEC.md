@@ -320,7 +320,7 @@ t_year = 前回までの経過年数 + Δt_year
 - 画像：Solar System ScopeのCC BY 4.0テクスチャとNASAの冥王星画像を加工・同梱。輪は模式描画。加工内容・クレジットは[CREDITS.md](CREDITS.md)へ記録済み。
 - 表示：本体の基準表示サイズと軌道色は5章の確定値を使用。Canvasの惑星名は11 CSS pxを基本とし、重なり時は引き出し線で調整。
 - 検証：WindowsのEdge、PC画面、スマートフォン相当の画面とタッチ入力で確認済み。詳細は[VALIDATION.md](VALIDATION.md)を参照。スマートフォン実機と他ブラウザーの検証は未実施。
-- 公開：Cloudflareアカウント、ソースリポジトリ、独自ドメインの指定は未確定。公開作業は未実施。設定手順は[README.md](README.md)へ記載済み。
+- 公開：Cloudflareアカウント、ソースリポジトリ、独自ドメインの指定は未確定。公開作業は未実施。設定手順は[Cloudflare公開手順](CLOUDFLARE_DEPLOYMENT.md)へ記載済み。
 
 ## 12. 参考資料
 
