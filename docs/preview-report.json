@@ -1,0 +1,17 @@
+{
+  "browser": "157.0.4341.60",
+  "engine": "Microsoft Edge (headless Chromium)",
+  "runtime": "production dist (Vite preview)",
+  "viewport": "1440x1000 DPR1",
+  "frameStats": {
+    "frames": 120,
+    "durationMs": 1999.9999999999998,
+    "fps": 60.00000000000001,
+    "medianFrameMs": 16.699999999999932
+  },
+  "productionBytes": 384439,
+  "productionGzipBytes": 197488,
+  "pageErrors": [],
+  "externalRequests": [],
+  "note": "Frame measurements are for the local headless desktop browser, not physical phone performance."
+}
